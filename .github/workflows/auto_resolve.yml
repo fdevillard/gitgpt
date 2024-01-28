@@ -8,6 +8,9 @@ on:
 jobs:
   resolve_issue:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: cicd
 
     steps:
     - name: Checkout repository
@@ -17,8 +20,6 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.12
-
-    - run: cd cicd
 
     - name: Install poetry
       uses: abatilo/actions-poetry@v3
