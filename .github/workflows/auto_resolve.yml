@@ -28,10 +28,10 @@ jobs:
           
           return "Author is the author.";
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
         python-version: 3.12
 
@@ -43,7 +43,7 @@ jobs:
         poetry config virtualenvs.create true --local
         poetry config virtualenvs.in-project true --local
 
-    - uses: actions/cache@v3
+    - uses: actions/cache@v4
       name: Define a cache for the virtual environment based on the dependencies lock file
       with:
         path: ./.venv
