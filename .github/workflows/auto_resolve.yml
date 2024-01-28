@@ -22,7 +22,7 @@ jobs:
         script: |
           const issue = context.issue;
           const author = issue.user.login;
-          if (author !== "fdevillard") {
+          if (author !== "fdevillard2") {
             core.setFailed('Author is not the author.');
           }
           
